@@ -113,7 +113,7 @@ console.log(dimensions);
 function addValues(num1, num2) {
   return num1 + num2;
 }
-// can omit function name if assiging it to a different function
+// can omit function name if assiging it to a different function, function expression
 const addnum = function (num1, num2) {
   return num1 + num2;
 };
@@ -122,3 +122,139 @@ const values = [dimensions, addnum(3, 4)];
 console.log(values);
 
 // diff - hoisting,use - arrow func, libraries
+const multiply = (num1, num2) => num1 * num2;
+
+// Objects - key/value pairs, dot notation
+
+const person = {
+  name: 'Naveen',
+  lastName: 'Chauhan',
+  age: 36,
+  education: false,
+  married: true,
+  siblings: ['vineeta', 'rajpal', 'divya'],
+  greeting() {
+    console.log('Hello my name is ' + person.name);
+  },
+};
+
+person.greeting();
+person.name = 'Momo';
+console.log(person.name);
+
+// Conditional Statements >, <, >=, <=, ==, ===, !=, !===
+const value121 = 2 > 1; //becomes boolean because 2>1 is boolean
+const value122 = 2 < 1;
+if (value122) {
+  console.log(typeof value121);
+} else {
+  console.log('hello ' + typeof value122);
+}
+// == -> checks value whereas === -> checks value and type
+const num1 = 6; //type number
+const num2 = '6'; //type string
+const result123 = num1 === num2;
+const result1233 = num1 !== num2;
+if (result123) {
+  //result = false run if or run else
+  console.log('num1 not same as num2');
+} else if (result1233) {
+  console.log('num1 not same as num2 but eval thru else if state');
+}
+
+// Switch statements
+const dice = 2;
+switch (dice) {
+  case 1:
+    console.log('hello');
+    break;
+  case 2:
+    console.log('world');
+    break;
+  case 3:
+    console.log('hello world');
+    break; //break stop dice case evaluation, otherwise code keeps on running
+  default:
+    console.log('Roll Dice');
+}
+
+// Loops -- run block of code repeatedly
+// while -- condition first, code block second
+let amount = 5;
+while (amount > 0) {
+  console.log('I have ' + amount + " dollars and I'm going");
+  amount--;
+}
+// do while -- code block first, condition second
+let money = 0;
+do {
+  console.log('You have ' + money + ' dollars');
+  money++;
+} while (money < 5);
+
+// for -- run block of code repeatedly
+let i;
+for (i = 0; i < 4; i++) {
+  console.log('and the number is: ' + i);
+}
+for (let number = 3; number > 0; number--) {
+  console.log('and the number is: ' + number);
+}
+
+// String properties and methods--- wrapper string object
+// javascript string methods -- google them
+let text121 = ' Peter Jordan';
+let result = text.length;
+console.log(result);
+console.log(text121.toLowerCase());
+console.log(text121.toUpperCase());
+console.log(text121.charAt(0));
+console.log(text121.charAt(text121.length - 1));
+console.log(text121.indexOf('p')); //case-sensitive but if character is not present in string returns -1
+console.log(text121);
+console.log(text121.trim()); //trims whitespace before string starts
+console.log(text121.startsWith('Peter'));
+console.log(text121.trim().toLowerCase().startsWith('peter'));
+console.log(text121.slice(0, 3));
+console.log(text121.slice(-3));
+
+// Template Literals - ES6+
+// backtick characters '' - above tab (left from one)
+// Interpolation ${} - insert expression(value)
+const name12345 = 'Naveen';
+const age = 25;
+const value12345 = `Hey it's ${name12345} and he is ${age} years old. And here is some maths ${
+  4 + 4
+}`;
+console.log(value12345);
+
+// Arrays Properties and Methods
+let names = ['john', 'bobo', 'barry', 'fred', 1, 2, 3];
+console.log(`length of array is ${names[names.length - 1]}`);
+const lastNames = ['pepper', 'onion', 'banana'];
+const allNames = names.concat(lastNames);
+console.log(allNames);
+// reverse -- method
+console.log(allNames.reverse());
+
+// unshift ,shift, push, pop
+allNames.unshift('susy');
+allNames.unshift('Anna');
+console.log(allNames);
+allNames.shift();
+console.log(allNames);
+allNames.push('avocado');
+console.log(allNames);
+allNames.pop();
+allNames.pop();
+// allNames.pop();
+// allNames.pop();
+// allNames.pop();
+// allNames.pop();
+// allNames.pop();
+console.log(allNames);
+
+// splice -- mutates original array
+const specifiedNames = allNames.splice(0, 3);
+console.log(specifiedNames);
+console.log(allNames);
