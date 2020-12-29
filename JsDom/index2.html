@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JsDom-2</title>
+    <style>
+      .red {
+        background: red;
+        color: white;
+        font-size: 3rem;
+        text-transform: capitalize;
+      }
+      .blue {
+        background: blue;
+        color: white;
+      }
+      .btn-blue {
+        background: blue;
+        color: white;
+        padding: 0.185rem 1.5rem;
+        border-radius: 6px 6px 6px 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="formik" />
+    <div id="result">
+      <h1 class="red">i'm the child of result</h1>
+    </div>
+    <ul id="first">
+      <li>list item</li>
+      <li>list item</li>
+    </ul>
+    <div id="second">i have some text content</div>
+    <button>click me</button>
+    <p onclick="this.classList.add('red')"> the old style </p>
+    <a href="#" id="link" class="blue">random link</a>
+    <button class="btns">clickme1</button>
+    <button class="btns"
+      >click <strong> me <strong>2</strong> </strong>
+    </button>
+    <button class="btns">clickme3</button>
+    <div class="container">
+      <ul class="list-items">
+        <li class="item"><a href="#" class="link">link</a></li>
+        <li class="item"><a href="#" class="link">link</a></li>
+        <li class="item"><a href="#" class="link">link</a></li>
+      </ul>
+    </div>
+    <div class="container2"> </div>
+    <button class="btn">clickme3</button>
+    <!-- form -->
+    <form action="" id="form">
+      <input type="text" id="name" />
+      <input type="password" id="password" />
+      <input type="submit" id="submit" />
+    </form>
+    <script src="app2.js"></script>
+  </body>
+</html>
